@@ -4,45 +4,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update</title>
+    <link rel="stylesheet" href="./public/styles/styles.css">
 </head>
 <body>
     <header>
         <a href="./index.html"><img src="./public/images/codesquad-comics-logo.png" alt="codesquad-comics-logo"></a>
-        <ul>
+        <ul class="header-links">
             <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">ABOUT</a></li>+
             <li><a href="#">LOGIN</a></li>
         </ul>
-        </header>
+    </header>
+    <div class="main-div">
         <h1>UPDATE COMIC</h1>
-        <form action="#"></form>
-        <label for="title">Title:</label>
-            <input type="text" id="title" name="title" value="title value stored in database"><br><br>
-        <label for="author">Author:</label>
-            <input type="text" id="author" name="author" value="author value stored in database"><br><br>
-        <label for="publisher">Publisher:</label>
-        <select name="publisher" id="publisher">
-            <option value="BOOM! Box">BOOM! Box</option>
-            <option value="BOOM! Box">BOOM! Box</option>
-            <option value="Harry N. Abrams">Harry N. Abrams</option>
-            <option value="Icon Books">Icon Books</option>
-            <option value="Image Comics">Image Comics</option>
-            <option value="Marvel">Marvel</option>
-            <option value="Simon & Schuster">Simon & Schuster</option>
-            <option value="Top Shelf Productions">Top Shelf Productions</option>
-            <option value="VIZ Media LLC">VIZ Media LLC</option>
-            <option value="publisher value stored in database" selected>publisher value stored in database</option>
-        </select><br><br>
-        <label for="genre">Genre:</label>
-        <input type="text" id="genre" name="genre" value="genre data stored in database"><br><br>
-        <label for="number-of-pages">Number of Pages:</label>
-        <input type="text" id="number-of-pages" name="number-of-pages" value="255"><br><br>
-        <label for="rating">Rating:</label>
-        <input type="text" id="rating" name="rating" value="5"><br><br>
-        <label for="synopsis">Synopsis:</label>
-        <textarea name="synopsis" id="synopsis" cols="30" rows="10">synopsis value stored in database</textarea>
-
-        <footer>
+        <form action="#">
+            <label for="title">Title:</label>
+                <input type="text" id="title" name="title" value="title value stored in database"><br><br>
+            <label for="author">Author:</label>
+                <input type="text" id="author" name="author" value="author value stored in database"><br><br>
+            <label for="publisher">Publisher:</label>
+            <select name="publisher" id="publisher">
+                <option value="BOOM! Box">BOOM! Box</option>
+                <option value="BOOM! Box">BOOM! Box</option>
+                <option value="Harry N. Abrams">Harry N. Abrams</option>
+                <option value="Icon Books">Icon Books</option>
+                <option value="Image Comics">Image Comics</option>
+                <option value="Marvel">Marvel</option>
+                <option value="Simon & Schuster">Simon & Schuster</option>
+                <option value="Top Shelf Productions">Top Shelf Productions</option>
+                <option value="VIZ Media LLC">VIZ Media LLC</option>
+                <option value="publisher value stored in database" selected>publisher value stored in database</option>
+            </select><br><br>
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre" value="genre data stored in database"><br><br>
+            <label for="number-of-pages">Number of Pages:</label>
+            <input type="text" id="number-of-pages" name="number-of-pages" value="255"><br><br>
+            <label for="rating">Rating:</label>
+            <input type="text" id="rating" name="rating" value="5"><br><br>
+            <label for="synopsis">Synopsis:</label>
+            <textarea name="synopsis" id="synopsis" cols="30" rows="10">synopsis value stored in database</textarea>
+        </form>
+    </div>
+    <footer>
             <h3>VISIT US</h3>
             <p>CodeSquad Comics<br>
             123 Dorchester Avenue <br>
@@ -59,8 +62,8 @@
             <a href="#">Twitter</a><br>
         
             <h3>A PRODUCT OF</h3>
-            <a href="http://codesquad.org" target="_blank"><img src="./public/images/CodeSquad-logo-a.png" alt="CodeSquad-logo-a"></a>
-            </footer>
+            <a href="http://codesquad.org" target="_blank"><img src="./public/images/CodeSquad-logo-b.png" alt="CodeSquad-logo-b" class="footer-logo"></a>
+    </footer>
     
 </body>
 </html>
