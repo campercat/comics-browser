@@ -17,7 +17,7 @@ footer{
     border-top: solid #FCCF14 5px;
 }
 
-a{
+footer > a, li > a{
     color: #FFFFFF;
 }
 
@@ -33,5 +33,48 @@ a{
 
 .main-div{
     padding: 20px;
+    
 }
 
+.top-card{
+    width: 600px;
+    margin: auto;
+    background-color: #063C5E;
+    border-radius: 50px 50px 0 0;
+    border-top: solid #FCCF14 5px;
+    border-right: solid #FCCF14 5px;
+    border-left: solid #FCCF14 5px;
+    height: 700px;
+}
+
+.card-title{
+    color: #FCCF14;
+    text-align: center;
+}
+
+.card-img{
+    display: block;
+    width: 400px;
+    margin: auto;
+    border-radius: 50px;
+    border-image: 50px;
+}
+
+.bottom-card{
+    width: 550px;
+    margin: auto;
+    border-radius: 0 0 50px 50px;
+    border: solid #FCCF14 5px;
+    padding: 25px;
+}
+
+span{
+    color: #063C5E;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.comic-index{
+    width: 200px;
+    height: auto;
+} 
