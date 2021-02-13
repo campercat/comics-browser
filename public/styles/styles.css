@@ -58,6 +58,7 @@ footer > a, li > a{
     margin: auto;
     border-radius: 50px;
     border-image: 50px;
+    border: solid 5px #FFF;
 }
 
 .bottom-card{
