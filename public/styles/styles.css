@@ -1,4 +1,14 @@
 /* Styling for all pages */
+:root {
+  --bg-lighter: #b1f0f0;
+  --bg-darker: #006b6b;
+  --theme-blue: #063c5e;
+  --white: #fff;
+  --yellow: #fccf14;
+  --black: black;
+  --grey: #c2c2c2;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,11 +20,12 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-size: 1.4rem;
-  background-image: linear-gradient(#b1f0f0, #006b6b);
+  background-image: linear-gradient(var(--bg-lighter), var(--bg-darker));
+  font-family: "Open Sans", sans-serif;
 }
 
 header {
-  background-color: #063c5e;
+  background-color: var(--theme-blue);
   padding: 0.5em 0 0.1em 0;
 }
 
@@ -25,16 +36,17 @@ header li {
 
 header a {
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
+  font-family: "Fredericka the Great", cursive;
 }
 
 header a:visited {
-  color: #fff;
+  color: var(--white);
 }
 
 header a:hover,
 footer a:hover {
-  color: #fccf14;
+  color: var(--yellow);
   font-weight: bold;
 }
 
@@ -57,9 +69,10 @@ footer {
   flex-flow: row wrap;
   justify-content: space-around;
   width: 100%;
-  background-color: #063c5e;
-  color: #ffffff;
-  border-top: solid #fccf14 5px;
+  background-color: var(--theme-blue);
+  color: var(--white);
+  border-top: solid var(--yellow) 5px;
+  font-family: "Fredericka the Great", cursive;
 }
 
 footer li {
@@ -67,13 +80,13 @@ footer li {
 }
 
 footer a {
-  color: #ffffff;
+  color: var(--white);
   text-decoration: none;
   display: block;
 }
 
 footer h3 {
-  color: #fccf14;
+  color: var(--yellow);
 }
 
 footer p {
@@ -81,7 +94,6 @@ footer p {
 }
 
 footer div {
-  /* display: inline-block; */
   width: 15%;
   margin-left: auto;
   margin-right: auto;
@@ -93,17 +105,30 @@ footer img {
   height: auto;
 }
 
+.follow-us-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.follow-us-text {
+  text-align: center;
+}
+
 .main-div {
   padding: 20px;
-  background-color: white;
-  border: solid 5px #063c5e;
-  margin:  5em;
+  background-color: var(--white);
+  border: solid 5px var(--theme-blue);
+  margin: 5em;
 }
 
 .main-div h1,
-.main-div h2 {
-  color: #063c5e;
+.main-div h2,
+.index-main-div h2 {
+  color: var(--theme-blue);
   text-align: center;
+  font-family: "Fredericka the Great", cursive;
 }
 .main-div p {
   padding: 0 1em;
@@ -111,138 +136,166 @@ footer img {
 
 /* Styling for update.html, create.html, and login.html */
 .form-update-container,
-.form-login-container {
+.form-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
   width: 50%;
   margin: auto;
 }
 
-.form-update-container label {
-  text-align: right;
+.form-container input[type="submit"] {
+  width: 20%;
+  margin-top: 20px;
 }
 
-.form-update-container input[type="text"],
-.form-update-container select,
-.form-login-container input[type="text"] {
+.form-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  width: 70%;
+  margin: auto;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea{
+  margin: 10px;
+  padding: 5px;
+  width: 70%;
+}
+
+.form-row label {
   width: 50%;
-  margin-right: 0;
-  padding-right: 0;
+  margin: auto;
+  text-align: right;
 }
 
 /* Styling for admin.html  */
 .table-admin-container {
   width: 45%;
   margin: auto;
+  text-align: right;
 }
 
 .table-admin-container table {
   width: 100%;
   margin: auto;
-  border: solid black 1px;
+  border: solid var(--black) 1px;
   border-collapse: collapse;
 }
 
 .table-admin-container th {
   background-color: #c2c2c2;
   padding: 0.5em;
-  border: solid black 1px;
+  border: solid var(--black) 1px;
   border-collapse: collapse;
 }
 
 .table-admin-container td {
   padding: 0.3em;
-  border: solid black 1px;
+  border: solid var(--black) 1px;
   border-collapse: collapse;
 }
 
 .table-admin-container tr:nth-child(even) {
-  background-color: #c2c2c2;
+  background-color: var(--grey);
 }
 
 input[value="DELETE"] {
-  background-color: #fccf14;
-  color: #063c5e;
+  background-color: var(--yellow);
+  color: var(--theme-blue);
   width: 80px;
 }
 
 input[value="ADD NEW COMIC"],
 input[type="submit"] {
-  background-color: #fccf14;
-  color: #063c5e;
+  background-color: var(--yellow);
+  color: var(--theme-blue);
   display: block;
   width: 150px;
   margin: auto;
 }
 
 input[value="EDIT"] {
-  background-color: #063c5e;
-  color: #fff;
+  background-color: var(--theme-blue);
+  color: var(--white);
   width: 80px;
 }
 
 /* Styling for index.html */
-.card-main-div {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: white;
-    border: solid 5px #063c5e;
-    margin: 3em 5em;
-  }
+.index-main-div {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--white);
+  border: solid 5px var(--theme-blue);
+  margin: 3em 5em;
+}
 
-.card-main-div div{
-    width: 300px;
-    text-align: center;
+.index-container div {
+  width: 300px;
+  text-align: center;
+}
+
+.index-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .comic-index {
-    width: 200px;
-    height: auto;
-  }
+  width: 200px;
+  height: auto;
+}
 
-  .details a{
-    text-decoration: none;
-  }
+.details a {
+  text-decoration: none;
+}
 
-  .details a:link{
-    color: #063c5e
-  }
+.details a:link {
+  color: var(--theme-blue);
+}
 
-  .details a:visited{
-    color: #063c5e
-  }
+.details a:visited {
+  color: var(--theme-blue);
+}
 
-  .details a:hover{
-    color: #006b6b;
-    font-weight: bold;
-  }
+.details a:hover {
+  color: #006b6b;
+  font-weight: bold;
+}
 
-  .details a:active{
-    color: #063c5e;
-    font-weight: bold;
-    background-color: #fccf14;
-  }
+.details a:active {
+  color: var(--theme-blue);
+  font-weight: bold;
+  background-color: var(--yellow);
+}
 
-  .index-display-button{
-      align-self: center;
-      width: 100%;
-  }
+.index-main-div input[type=button] {
+  background-color: var(--yellow);
+  color: var(--theme-blue);
+  width: 150px;
+  margin: 50px;
+}
 
 /* Styling for individual comic cards */
 
 .top-card {
   width: 600px;
   margin: auto;
-  background-color: #063c5e;
+  background-color: var(--theme-blue);
   border-radius: 50px 50px 0 0;
-  border-top: solid #fccf14 5px;
-  border-right: solid #fccf14 5px;
-  border-left: solid #fccf14 5px;
+  border-top: solid var(--yellow) 5px;
+  border-right: solid var(--yellow) 5px;
+  border-left: solid var(--yellow) 5px;
   height: 750px;
 }
 
 .card-title {
-  color: #fccf14;
+  color: var(--yellow);
   text-align: center;
 }
 
@@ -252,7 +305,7 @@ input[value="EDIT"] {
   margin: auto;
   border-radius: 50px;
   border-image: 50px;
-  border: solid 5px #fff;
+  border: solid 5px var(--white);
   text-align: center;
 }
 
@@ -260,20 +313,18 @@ input[value="EDIT"] {
   width: 600px;
   margin: auto;
   border-radius: 0 0 50px 50px;
-  border: solid #fccf14 5px;
+  border: solid var(--yellow) 5px;
   padding: 25px;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 span {
-  color: #063c5e;
+  color: var(--theme-blue);
   font-weight: bold;
   text-decoration: underline;
 }
 
-.main-card-div {
+/* .card-main-div {
   padding: 20px;
-  /* background-color: white;
-    border: solid 5px #063C5E; */
   margin: 3em 5em;
-}
+} */
