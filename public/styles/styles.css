@@ -205,12 +205,11 @@ input[type="submit"] {
 }
 
 .table-admin-container table {
-  /* display: block; */
-  width: 50%;
+  width: 80%;
+  min-width: 450px;
   margin: auto;
   border: solid var(--black) 1px;
   border-collapse: collapse;
-  /* white-space: nowrap; */
 }
 
 .table-admin-container th {
@@ -314,6 +313,8 @@ input[value="EDIT"] {
 
 .main-card-div {
   margin: 5rem 0;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .top-card {
@@ -343,7 +344,7 @@ input[value="EDIT"] {
 }
 
 .bottom-card {
-  width: 600px;
+  width: 40rem;
   margin: auto;
   border-radius: 0 0 50px 50px;
   border: solid var(--yellow) 5px;
@@ -358,7 +359,7 @@ span {
 }
 
 /* ---------------------------------------------------- */
-/* Media Queries */
+/* MEDIA QUERIES */
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
   /* Styling for all pages */
@@ -437,9 +438,9 @@ span {
     min-width: 200px;
   } */
 
-  .table-admin-container table {
+  /* .table-admin-container table {
     width: 100%;
-  }
+  } */
 
   /* ---------------------------------------------------- */
   /* Styling for index.html */
@@ -458,10 +459,10 @@ span {
     margin: 1rem;
     padding: 0;
   }
+}
 
   /* ---------------------------------------------------- */
   /* Styling for individual comic cards */
-}
 
 @media screen and (min-width: 1024px) {
 
