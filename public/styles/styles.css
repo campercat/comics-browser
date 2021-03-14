@@ -22,6 +22,9 @@ body {
   font-size: 1.4rem;
   background-image: linear-gradient(var(--bg-lighter), var(--bg-darker));
   font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
@@ -132,6 +135,7 @@ footer p {
 }
 
 .main-div {
+  max-width: 100%;
   padding: 20px;
   background-color: var(--white);
   border: solid 5px var(--theme-blue);
@@ -315,10 +319,11 @@ input[value="EDIT"] {
   margin: 5rem 0;
   display: flex;
   flex-flow: column nowrap;
+  width: 80%;
 }
 
 .top-card {
-  width: 40rem;
+  max-width: 600px;
   margin: auto;
   background-color: var(--theme-blue);
   border-radius: 50px 50px 0 0;
@@ -344,7 +349,7 @@ input[value="EDIT"] {
 }
 
 .bottom-card {
-  width: 40rem;
+  max-width: 600px;
   margin: auto;
   border-radius: 0 0 50px 50px;
   border: solid var(--yellow) 5px;
@@ -434,14 +439,6 @@ span {
     overflow-x: auto;
   }
 
-  /* .table-admin-container table th, td {
-    min-width: 200px;
-  } */
-
-  /* .table-admin-container table {
-    width: 100%;
-  } */
-
   /* ---------------------------------------------------- */
   /* Styling for index.html */
 
@@ -465,6 +462,30 @@ span {
   /* Styling for individual comic cards */
 
 @media screen and (min-width: 1024px) {
+  .main-card-div {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
 
+  .top-card {
+    border-radius: 50px 0 0 50px;
+    border: solid var(--yellow) 5px;
+    border-right: none;
+    margin: 0;
+    max-width: 30%;
+    height: 100%;
+  }
 
+  .bottom-card {
+    border-radius: 0 50px 50px 0;
+    border: solid var(--yellow) 5px;
+    border-left: none;
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    max-width: 60%;
+  }
 }
