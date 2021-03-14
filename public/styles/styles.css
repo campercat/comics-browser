@@ -22,7 +22,7 @@ body {
   font-size: 1.4rem;
   background-image: linear-gradient(var(--bg-lighter), var(--bg-darker));
   font-family: "Open Sans", sans-serif;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
 }
@@ -314,6 +314,10 @@ input[value="EDIT"] {
 
 /* ---------------------------------------------------- */
 /* Styling for individual comic cards */
+
+.card-body {
+  display: flex;
+}
 
 .main-card-div {
   margin: 5rem 0;
